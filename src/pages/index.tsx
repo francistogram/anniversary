@@ -1,13 +1,12 @@
 import classNames from "classnames";
 import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
-import useScrollPercentage from "../hooks/useScrollPercentage";
-import { type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import Confetti from "react-confetti";
 import assert from "assert";
 
 export default function Home() {
-  const [scrollRef, scrollPercentage] = useScrollPercentage();
+  const [scrollPercentage, setScrollPercentage] = useState<number>(0);
 
   const sentences: {
     copy: string | ReactNode | (string | ReactNode)[];
@@ -88,11 +87,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        ref={scrollRef}
+        // ref={scrollRef}
         className={classNames(
           "flex h-screen w-screen items-center justify-center overflow-scroll bg-gradient-to-r bg-size-200 transition-all duration-500 ease-in-out",
           background
         )}
+        onScroll={(e) => {
+          const element = e.target as HTMLDivElement;
+          const scrollPercentage =
+            (element.scrollTop /
+              (element.scrollHeight - element.clientHeight)) *
+            100;
+
+          setScrollPercentage(scrollPercentage);
+        }}
       >
         <div className="h-[12000px] w-full">
           <div
