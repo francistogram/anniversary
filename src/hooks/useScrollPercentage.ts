@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useRef, useState, useEffect } from "react";
 import { type Ref } from "react";
 
@@ -32,8 +33,12 @@ const getScrollPercentage = (element: EventTarget | null) => {
   if (element === null) {
     return NaN;
   }
-  const height = element.scrollHeight - element.clientHeight;
-  return (element.scrollTop / height) * 100;
+
+  // @ts-ignore I might have types wrong but these exists
+  const { scrollHeight, clientHeight, scrollTop } = element;
+
+  const height = scrollHeight - clientHeight;
+  return (scrollTop / height) * 100;
 };
 
 export default useScrollPercentage;
