@@ -15,6 +15,19 @@ export default {
         "pos-0": "0% 0%",
         "pos-100": "100% 100%",
       },
+      animation: {
+        meteor: "meteor 50s linear infinite",
+      },
+      keyframes: {
+        meteor: {
+          "0%": { transform: "rotate(230deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(230deg) translateX(-1250px)",
+            opacity: "0",
+          },
+        },
+      },
     },
   },
   plugins: [],

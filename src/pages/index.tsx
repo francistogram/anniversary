@@ -2,8 +2,8 @@ import classNames from "classnames";
 import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
 import { useState, type ReactNode } from "react";
-import Confetti from "react-confetti";
 import assert from "assert";
+import Meteors from "~/components/Meteors";
 
 export default function Home() {
   const [scrollPercentage, setScrollPercentage] = useState<number>(0);
@@ -81,7 +81,6 @@ export default function Home() {
 
   return (
     <>
-      {onLastSentence && <Confetti colors={["#FDC5D4"]} />}
       <Head>
         <title>Mikel & Francisco</title>
         <meta name="description" content="3 Years Together" />
@@ -137,6 +136,7 @@ export default function Home() {
                     "flex h-screen w-full flex-col items-center justify-center gap-2 pt-10 text-2xl text-white lg:text-5xl"
                   )}
                 >
+                  <Meteors number={100} />
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
