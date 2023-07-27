@@ -88,7 +88,7 @@ export default function Home() {
       </Head>
       <main
         className={classNames(
-          "flex h-screen w-screen items-center justify-center overflow-scroll bg-gradient-to-r bg-size-200 transition-all duration-500 ease-in-out",
+          "hidden-scrollbar flex h-screen w-screen items-center justify-center overflow-scroll bg-gradient-to-r bg-size-200 transition-all duration-500 ease-in-out",
           background
         )}
         onScroll={(e) => {
