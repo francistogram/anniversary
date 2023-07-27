@@ -58,9 +58,10 @@ export default function Home() {
       ],
       background: "from-yellow-400 to-pink-400 bg-pos-100",
     },
-    { copy: "All of this for you. " },
     {
-      copy: "Who knows what the future holds but take comfort in knowing some things will never change. ",
+      copy: (
+        <div className="flex w-full justify-center">All of this for you.</div>
+      ),
     },
   ];
 
@@ -76,7 +77,7 @@ export default function Home() {
   const background =
     currentSentence.background ?? "from-black to-black bg-pos-0";
 
-  const onLastSentence = scrollPercentage > 100 - sectionLength;
+  const onLastSentence = scrollPercentage > 100 - sectionLength / 2;
 
   return (
     <>
