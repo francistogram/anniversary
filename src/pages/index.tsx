@@ -153,7 +153,7 @@ export default function Home() {
                 </motion.div>
               )}
               {scrollPercentage > 0 && !onLastSentence && (
-                <motion.div className="px-2 leading-[30px] 2xl:max-w-5xl 2xl:leading-[60px]">
+                <motion.div className="px-2 text-sm leading-[30px] 2xl:max-w-5xl 2xl:leading-[60px]">
                   {sentences.map((sentence, index) => {
                     const prevBreakpoint = Math.max(0.1, sectionLength * index);
                     const breakpoint = sectionLength * (index + 1);
