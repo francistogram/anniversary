@@ -101,14 +101,14 @@ export default function Home() {
           setScrollPercentage(scrollPercentage);
         }}
       >
-        <div className="h-[3000px] w-full 2xl:h-[12000px]">
+        <div className="h-[3000px] w-full lg:h-[10000px]">
           <div
             style={{
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
             }}
-            className="pointer-events-none fixed flex h-screen w-full max-w-sm items-center justify-center px-4 font-medium text-transparent "
+            className="pointer-events-none fixed flex h-screen w-screen max-w-sm items-center justify-center px-4 font-medium text-transparent lg:max-w-none "
           >
             <AnimatePresence>
               {scrollPercentage === 0 && (
@@ -133,7 +133,7 @@ export default function Home() {
                 <motion.div
                   key="last-sentence"
                   className={classNames(
-                    "flex h-screen w-screen flex-col items-center justify-center gap-2 pt-10 text-2xl text-white 2xl:text-5xl"
+                    "flex h-screen w-full flex-col items-center justify-center gap-2 pt-10 text-2xl text-white lg:text-5xl"
                   )}
                 >
                   <motion.div
@@ -153,7 +153,7 @@ export default function Home() {
                 </motion.div>
               )}
               {scrollPercentage > 0 && !onLastSentence && (
-                <motion.div className="translate-y-4 px-2 text-xs leading-[30px] 2xl:max-w-5xl 2xl:leading-[60px]">
+                <motion.div className="max-w-4xl translate-y-4 px-2 text-xs leading-[30px] lg:w-full lg:text-2xl lg:leading-[60px]">
                   {sentences.map((sentence, index) => {
                     const prevBreakpoint = Math.max(0.1, sectionLength * index);
                     const breakpoint = sectionLength * (index + 1);
@@ -177,7 +177,7 @@ export default function Home() {
                                     scrollPercentage <= breakpoint &&
                                     scrollPercentage >= prevInnerBreakpoint &&
                                     !onLastSentence,
-                                  "text-white/50 2xl:text-white/10":
+                                  "text-white/50 lg:text-white/10":
                                     scrollPercentage > breakpoint &&
                                     !onLastSentence,
                                 })}
