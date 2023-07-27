@@ -8,7 +8,7 @@ const Meteors = ({ number = 20 }: MeteorsProps) => {
   const [meteorStyles, setMeteorStyles] = useState<React.CSSProperties[]>([]);
 
   useEffect(() => {
-    const styles = [...new Array(number)].map(() => ({
+    const styles = new Array(number).fill(0).map(() => ({
       top: -5,
       left: Math.floor(Math.random() * window.innerWidth) + "px",
       animationDelay: Math.random() * 1 + 0.2 + "s",
