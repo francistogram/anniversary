@@ -83,8 +83,8 @@ export default function Home() {
     <>
       {onLastSentence && <Confetti colors={["#FDC5D4"]} />}
       <Head>
-        <title>3 Years</title>
-        <meta name="description" content="3 Years" />
+        <title>Mikel & Francisco</title>
+        <meta name="description" content="3 Years Together" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
