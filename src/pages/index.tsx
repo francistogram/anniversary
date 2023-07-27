@@ -14,7 +14,7 @@ export default function Home() {
   }[] = [
     { copy: "Hi Mikel. " },
     { copy: "It's been three years today. " },
-    { copy: "Time flies. Doesn't it?" },
+    { copy: "Time flies. Doesn't it? " },
     { copy: "We've moved cities, switched jobs, found new friends. " },
     { copy: "Three years of change, of growing together, of love. " },
     {
