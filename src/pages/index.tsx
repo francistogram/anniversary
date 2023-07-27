@@ -133,7 +133,7 @@ export default function Home() {
                 <motion.div
                   key="last-sentence"
                   className={classNames(
-                    "flex h-screen w-screen flex-col items-center justify-center gap-2 text-5xl text-white"
+                    "flex h-screen w-screen flex-col items-center justify-center gap-2 text-2xl text-white 2xl:text-5xl"
                   )}
                 >
                   <motion.div
