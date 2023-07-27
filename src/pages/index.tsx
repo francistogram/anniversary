@@ -198,7 +198,7 @@ export default function Home() {
                               scrollPercentage < breakpoint &&
                               scrollPercentage >= prevBreakpoint &&
                               !onLastSentence,
-                            "text-white/10":
+                            "text-white/50 lg:text-white/10":
                               scrollPercentage > breakpoint && !onLastSentence,
                           })}
                         >
