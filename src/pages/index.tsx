@@ -138,18 +138,11 @@ export default function Home() {
                   )}
                 >
                   <motion.div
-                    initial={{ rotateX: 90 }}
-                    animate={{ rotateX: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                   >
                     Happy Anniversary Mikel!
-                  </motion.div>
-                  <motion.div
-                    initial={{ rotateX: 90 }}
-                    animate={{ rotateX: 0 }}
-                    transition={{ duration: 1 }}
-                  >
-                    Francisco
                   </motion.div>
                 </motion.div>
               )}
