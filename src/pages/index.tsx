@@ -178,7 +178,7 @@ export default function Home() {
                                     scrollPercentage <= breakpoint &&
                                     scrollPercentage >= prevInnerBreakpoint &&
                                     !onLastSentence,
-                                  "text-white/30 lg:text-white/10":
+                                  "text-white/20 lg:text-white/10":
                                     scrollPercentage > breakpoint &&
                                     !onLastSentence,
                                 })}
@@ -198,7 +198,7 @@ export default function Home() {
                               scrollPercentage < breakpoint &&
                               scrollPercentage >= prevBreakpoint &&
                               !onLastSentence,
-                            "text-white/30 lg:text-white/10":
+                            "text-white/20 lg:text-white/10":
                               scrollPercentage > breakpoint && !onLastSentence,
                           })}
                         >
