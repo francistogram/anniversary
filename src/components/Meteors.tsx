@@ -15,7 +15,7 @@ const Meteors = ({ number = 20 }: MeteorsProps) => {
         Math.floor(Math.random() * window.innerWidth * 1.7) +
         "px",
       animationDelay: Math.random() * 1 + 0.2 + "s",
-      animationDuration: Math.floor(Math.random() * 5 + 2) + "s",
+      animationDuration: Math.floor(Math.random() * 5 + 3) + "s",
     }));
     setMeteorStyles(styles);
   }, [number]);
