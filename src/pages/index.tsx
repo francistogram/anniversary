@@ -87,7 +87,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        // ref={scrollRef}
         className={classNames(
           "flex h-screen w-screen items-center justify-center overflow-scroll bg-gradient-to-r bg-size-200 transition-all duration-500 ease-in-out",
           background
@@ -102,16 +101,34 @@ export default function Home() {
           setScrollPercentage(scrollPercentage);
         }}
       >
-        <div className="h-[12000px] w-full">
+        <div className="h-[3000px] w-full 2xl:h-[12000px]">
           <div
             style={{
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
             }}
-            className="pointer-events-none fixed flex h-screen w-full max-w-sm items-center justify-center px-4 text-2xl font-medium leading-[60px] text-transparent 2xl:max-w-5xl "
+            className="pointer-events-none fixed flex h-screen w-full max-w-sm items-center justify-center px-4 font-medium text-transparent "
           >
             <AnimatePresence>
+              {scrollPercentage === 0 && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <div className="mouse_scroll">
+                    <div className="mouse">
+                      <div className="wheel"></div>
+                    </div>
+                    <div>
+                      <span className="m_scroll_arrows unu"></span>
+                      <span className="m_scroll_arrows doi"></span>
+                      <span className="m_scroll_arrows trei"></span>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
               {onLastSentence && (
                 <motion.div
                   key="last-sentence"
@@ -135,10 +152,10 @@ export default function Home() {
                   </motion.div>
                 </motion.div>
               )}
-              {!onLastSentence && (
-                <motion.div>
+              {scrollPercentage > 0 && !onLastSentence && (
+                <motion.div className="px-2 leading-[30px] 2xl:max-w-5xl 2xl:leading-[60px]">
                   {sentences.map((sentence, index) => {
-                    const prevBreakpoint = Math.max(1, sectionLength * index);
+                    const prevBreakpoint = Math.max(0.1, sectionLength * index);
                     const breakpoint = sectionLength * (index + 1);
 
                     if (Array.isArray(sentence.copy)) {
