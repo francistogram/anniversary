@@ -102,7 +102,7 @@ export default function Home() {
           setScrollPercentage(scrollPercentage);
         }}
       >
-        <div className="h-[3000px] w-full lg:h-[10000px]">
+        <div className="h-[6000px] w-full lg:h-[10000px]">
           <div
             style={{
               top: "50%",
