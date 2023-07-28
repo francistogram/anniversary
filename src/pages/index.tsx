@@ -70,7 +70,7 @@ export default function Home() {
 
   // Given the scroll percentage find the current sentence
   const currentSentence =
-    sentences[Math.floor((scrollPercentage / 100) * sentences.length)] ??
+    sentences[Math.floor((scrollPercentage / 100) * (sentences.length + 1))] ??
     sentences[sentences.length - 1];
 
   assert(currentSentence);
