@@ -52,7 +52,7 @@ export default function Home() {
         "To make time for you",
         ", buy flowers for you",
         ", chauffeur you",
-        ", yell your name in excitement when come home to surprise you",
+        ", yell your name in excitement when you come home",
         ", sit in coffee shops with you",
         ", walk Tala so you can sleep in. ",
       ],
