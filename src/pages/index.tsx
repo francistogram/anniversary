@@ -118,14 +118,12 @@ export default function Home() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <div className="mouse_scroll">
-                    <div className="mouse">
-                      <div className="wheel"></div>
-                    </div>
-                    <div>
-                      <span className="m_scroll_arrows unu"></span>
-                      <span className="m_scroll_arrows doi"></span>
-                      <span className="m_scroll_arrows trei"></span>
+                  <div id="wrapper">
+                    <div id="wrapper-inner">
+                      <div id="scroll-down">
+                        <span className="arrow-down"></span>
+                        <span id="scroll-title">Scroll down</span>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
