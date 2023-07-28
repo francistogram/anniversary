@@ -65,7 +65,8 @@ export default function Home() {
     },
   ];
 
-  const sectionLength = 100 / sentences.length;
+  // +1 for the ending scene
+  const sectionLength = 100 / (sentences.length + 1);
 
   // Given the scroll percentage find the current sentence
   const currentSentence =
@@ -77,7 +78,7 @@ export default function Home() {
   const background =
     currentSentence.background ?? "from-black to-black bg-pos-0";
 
-  const onLastSentence = scrollPercentage > 100 - sectionLength / 2;
+  const onLastSentence = scrollPercentage > 100 - sectionLength;
 
   return (
     <>
